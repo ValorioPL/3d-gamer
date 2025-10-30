@@ -1,0 +1,101 @@
+:root {
+    color-scheme: dark;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(circle at top, #1d1d1d, #050505 60%);
+    color: #f1f1f1;
+    overflow: hidden;
+    height: 100vh;
+}
+
+#gameCanvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+}
+
+#hud {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    padding: 1rem 1.5rem;
+    background: rgba(12, 12, 12, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    backdrop-filter: blur(8px);
+    max-width: 360px;
+    pointer-events: none;
+}
+
+#hud h1 {
+    margin: 0 0 0.6rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+#hud .objective {
+    margin: 0 0 0.75rem;
+    font-size: 0.85rem;
+    line-height: 1.35;
+    color: #b3b3b3;
+}
+
+#hud .stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.9rem;
+}
+
+#hud .stats span strong {
+    color: #ff5dd8;
+}
+
+#hud .stats span + span strong {
+    color: #4dd0ff;
+}
+
+#hud .stats span + span + span strong {
+    color: #f2e863;
+}
+
+#hud .log {
+    margin-top: 0.75rem;
+    min-height: 2.75rem;
+    font-size: 0.8rem;
+    color: #8ad7ff;
+    letter-spacing: 0.02em;
+}
+
+footer {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    background: rgba(12, 12, 12, 0.55);
+    padding: 0.65rem 1rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    max-width: 320px;
+    text-align: center;
+}
+
+@media (max-width: 720px) {
+    #hud {
+        max-width: 90vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    footer {
+        display: none;
+    }
+}
